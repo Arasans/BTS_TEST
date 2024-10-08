@@ -56,4 +56,9 @@ class User extends Authenticatable implements JWTSubject
             'password' => 'hashed',
         ];
     }
+
+    public function checklists()
+    {
+        return $this->hasMany(Checklist::class);
+    }
 }
